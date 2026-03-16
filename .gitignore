@@ -1,0 +1,5 @@
+# Ignore Drone Dataset Zip files
+*.zip
+data/
+output/
+__pycache__/
