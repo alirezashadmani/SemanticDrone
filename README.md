@@ -2,9 +2,7 @@
 
 This repository contains a Convolutional Neural Network (U-Net) designed for semantic segmentation of high-resolution drone imagery. 
 
-The original codebase was refactored from a monolithic Jupyter Notebook into a structured, scalable, and memory-efficient Python package.
-
-## Refactoring Highlights
+## Highlights
 1. **Out-of-Memory (OOM) Prevention:** Replaced the legacy loop-based data loading (which loaded 400x 4000x6000 images directly into RAM) with a scalable `tf.data.Dataset` pipeline. Images and masks are now dynamically loaded, resized, and streamed batch-by-batch to the GPU.
 2. **Environment Independence:** Removed hardcoded Google Colab paths (`/content/drive/...`).
 3. **Modular Architecture:** Extracted core logic into standard Python modules (`src/dataset.py`, `src/model.py`, `src/train.py`).
